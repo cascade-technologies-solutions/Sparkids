@@ -63,9 +63,9 @@ function Header() {
         <span></span>
       </div>
       <nav className={`nav ${isNavOpen ? "active" : ""}`}>
-        <button onClick={toggleTheme}>
+        {/* <button onClick={toggleTheme}>
           {isDarkMode ? "🌞 Mode" : "˚☽˚.⋆ Mode"}
-        </button>
+        </button> */}  {/*Uncomment this to add a theme toggle button*/}
         <ul>
           <li>
             <NavLink
