@@ -1,0 +1,156 @@
+
+.slider-container {
+  width: 1280px; 
+  height: 480px;
+  margin: auto;
+  position: relative;
+  overflow: hidden; 
+  padding: 58px;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: auto;
+  overflow: hidden; 
+}
+
+
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out; 
+  width: 100%; 
+}
+
+
+.slider-item {
+  display: flex;
+  flex-shrink: 0; 
+  width: 100%; 
+  height: 100%;
+}
+
+
+.image-container {
+  width: 50%; 
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  width: 100%; 
+  height: 100%; 
+  width :480px;
+  height: 480%;
+  object-fit: cover; 
+  transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+transform: translateY(-10px);
+}
+
+
+
+.content-container {
+  width: 50%;
+  height: 100%;
+  width: 528px;
+  height: 348px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #ffffff;
+  box-sizing: border-box;
+  
+  margin-top: 61px;
+}
+
+
+.text-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -76px;
+}
+
+.text-content h2 {
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-family: Lilita One;
+  font-weight: 400;
+  color: #F58634;
+}
+
+.text-content p {
+ 
+  font-size:24px ;
+  font-family: Geologica;
+  font-weight: 400;
+  color: #343434;
+}
+.text-content p span{
+  line-height: 1.5;
+  font-size:24px ;
+  font-family: Geologica;
+  font-weight: 400;
+  color:#F58634 ;
+}
+
+.dots-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 37px;
+  margin-left: -372px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: orange;
+}
+
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: orange;
+  color: white;
+  border: none;
+  width: 40px; 
+  height: 40px;
+  cursor: pointer;
+  border-radius: 50%; 
+  font-size: 16px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.slider-button.prev {
+  left: 10px;
+}
+
+.slider-button.next {
+  right: 10px;
+}
+
+.slider-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

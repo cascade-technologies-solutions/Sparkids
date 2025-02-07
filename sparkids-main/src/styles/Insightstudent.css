@@ -1,0 +1,82 @@
+.insightstudent{
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+  }
+  
+  .insightstudent-title {
+    font-size: 50px;
+    font-weight: 400;
+    font-family:lilita one;
+    color: #455A64;
+    margin-bottom: -9px;
+  }
+  
+  .insightstudent-highlight {
+    color: #f58634;
+  }
+  
+  .insightstudent-subtitle {
+    font-size: 24px;
+    color: #455A64;
+    font-weight:400;
+    font-family:geologica;
+    margin-bottom: 11px;
+  }
+  
+  .insightstudent-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .insightstudent-card {
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.4s ease;
+  }
+  
+  .insightstudent-wrapper {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background-color: #f58634;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .insightstudent-image {
+    width: 312px;
+    height: 350.02px;
+    border-radius: 50%;
+  }
+  
+  .insightstudent-name {
+    font-size: 24px;
+    font-weight: 400;
+    color: #343434;
+    font-family: geologica;
+    margin-bottom: -18px;
+  }
+  
+  .insightstudent-prize {
+    font-size: 20px;
+    font-weight: 100;
+    color: #343434;
+    font-family: geologica;
+    margin-bottom: -15px;
+  }
+  
+  .insightstudent-description {
+    line-height: 1.5;
+    font-size: 22px;
+    font-weight: 100;
+    color: #343434;
+    font-family: geologica;
+  }

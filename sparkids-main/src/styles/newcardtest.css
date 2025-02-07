@@ -1,0 +1,130 @@
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 85px;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .slick-slider {
+    display: flex;
+    align-items: center;
+  }
+  
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+  }
+  .product-box{
+    height: 532px;
+    width: 332px;
+    background-color:#ffffff;
+    border-radius: 41px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    /* margin-left: 300px; */
+    transition: box-shadow 0.3s ease-in-out;
+}
+.product-box:hover {
+    box-shadow: 0 0 15px 4px rgba(75, 75, 75, 0.8);
+  }
+
+.product-box img{
+    width: 347px;
+    margin-left: -8px;
+    height: 337px;
+    object-fit: cover;
+    margin-bottom: -31px;
+}
+
+.description-box{
+    padding: 0 20px;
+}
+
+.description-box h3{
+color:#0d0d0d;
+font-size: 23.33px;
+font-weight: bold;
+font-family: KoHo;
+}
+.description-box h3 span{
+    color: #455a64;
+    font-size: 16.96px;
+    font-weight: 400;
+    margin-left: 130px;
+}
+.description-box p{
+    margin-top: -13px;
+    margin-bottom: 50px;
+    color: #323030;
+    font-size: 18.66px;
+    font-family: KoHo;
+}
+.price{
+    margin: 8px 0px;
+    font-size: 20px;
+    color:#222;
+    font-weight: bold;
+}
+
+span{
+    color: #777;
+    margin-left: 10px;
+}
+
+.course-info{
+    display: flex;
+    flex-wrap: wrap;
+    margin: -12px 0px;
+    gap: 50px;
+    color: #455a64;
+    font-size: 16.96px;
+    font-weight: 400;
+}
+.course-info img{
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+.info-item{
+    display: flex;
+    gap: 15px;
+    font-size: 18.96px;
+    color: #455a64;
+    margin-top: -19px;
+}
+
+.info-item1{
+    gap: 15px;
+    font-size: 16.96px;
+    color: #455a64;
+    margin-top: -121px;
+    margin-left: 151px;
+}
+
+.info-item1 img{
+    width: 189px;
+    height: 123px;
+    object-fit: contain;
+}
+.learn-more img{
+    width: 100px;
+}
+.info-item1 h2{
+    color: #ffffff;
+    font-size: 19px;
+    font-weight: 400;
+    font-family: 'KoHo';
+    text-decoration: none;
+    margin-top: -49px;
+    margin-left: 31px;
+}
+
+.bulb-icon img{
+  width: 15px;
+  height: 15px;
+}
+
+.info-item span{
+    width: 200px;
+    height: 100px;
+}

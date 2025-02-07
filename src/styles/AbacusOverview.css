@@ -1,0 +1,361 @@
+.page-container {
+  margin: 12rem 12rem;
+  margin-bottom: 20px;
+}
+
+.tab-header {
+  gap: 40px;
+      background: none;
+      border-bottom: 2px solid #eee;
+      margin-left: -15rem;
+      margin-bottom: -70px;
+      padding: 109px;
+}
+
+.tab-button {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--primary-grey);  
+  font-family: geologica;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.tab-button.active {
+  color: var(--primary-orange);
+  border-bottom: 3px solid var(--primary-orange);
+}
+
+.tab-button:hover {
+  color: var(--primary-orange);
+}
+
+/* Box with Shadow for Content */
+.content-card {
+  padding: 3rem 5rem;
+  width: 1250px;
+  height: auto;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    background: var(--item-color);
+    margin-left:-150px;
+
+}
+
+/* Titles and Text */
+.main-title {
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--primary-orange);
+  font-family: lilita one;
+  margin-bottom: 1rem;
+}
+
+.sub-title {
+  font-size: 30px;
+  font-weight: 400;
+  font-family: lilita one;
+  margin-bottom: 1rem;
+  color: var(--primary-orange);
+}
+
+.overview-description {
+  font-size: 22px;
+  color: var(--highlight-color);
+  line-height: 1.6;
+  font-family: geologica;
+  margin-bottom: 1rem;
+}
+
+/* List of Benefits */
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 3rem 0;
+  line-height: 40px;
+}
+
+.benefits-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: geologica;
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: var(--primary-grey);
+}
+
+.benefits-list img {
+  width: 28px;
+  height: 28px;
+}
+.course-dropdown-item {
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+.dropdown-header {
+  display: flex  ;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px;
+      background: rgb(245 134 52 / 13%);
+      cursor: pointer;
+      border-radius: 20px;
+}
+
+.dropdown-header h3 {
+  margin: 0;
+  font-size: 24px;
+  font-family: 'Geologica';
+  font-weight: bold;
+}
+
+.dropdown-header span {
+  font-size: 1.5rem;
+  color: var(--primary-orange);
+}
+
+.dropdown-content {
+  padding: 1rem;
+  background: var(--item-color);
+  font-size: 24px;
+  font-family: 'Geologica';
+  color: var(--primary-grey);
+}
+.dropdown-content p span{
+  font-family: 'Geologica';
+  color: var(--primary-orange);
+}
+.dropdown-subtitle {
+  color: var(--primary-orange);
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 22px;
+}
+.dropdown-course-info{
+  margin-bottom: 1rem;
+  color: var(--primary-grey);
+  font-size: 22px;
+  font-family: geologica;
+}
+  .dropdown-course-info span {
+    
+  color: var(--primary-orange);
+  }
+
+.details-content {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+.level-detail span {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary-orange);
+}
+.level-detail {
+  color: var(--primary-grey);
+}
+.level-detail li {
+  line-height: 30px;
+}
+
+.main-title {
+  font-size: 30px;
+  font-family: lilita one;
+  color: var(--primary-orange);
+  margin-bottom: 1rem;
+}
+
+.sub-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-grey);
+  font-family: lilita one;
+}
+
+.brain-activation-list,
+.key-skills-list{
+  list-style: none;
+  padding: 0;
+  font-size: 22px;
+  font-family: geologica;
+  margin: 1rem 0;
+}
+
+.brain-activation-list li,
+.key-skills-list li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.key-skills-list span {
+  color: var(--primary-orange);
+}
+.opportunity-list{
+  list-style: none;
+  padding: 0;
+  font-size: 22px;
+  font-family: geologica;
+  margin: 1rem 0;
+}
+@media (max-width: 768px) {
+  .page-container {
+    margin: 4rem 2rem;
+    margin-top: -150px;
+  }
+
+  .tab-header {
+    padding: 20px;
+    margin-left: 0;
+    margin-bottom: 0px;
+    gap: 20px;
+  }
+
+  .tab-button {
+    font-size: 18px;
+    padding: 0.5rem;
+  }
+
+  .content-card {
+    width: auto;
+    padding: 2rem;
+    margin-left: 0;
+  }
+  .overview-description {
+    font-size: 18px;
+    width: 100%;
+  }
+  .benefits-list li {
+    font-size: 20px;
+    gap: 8px;
+  }
+  .dropdown-header h3 {
+    font-size: 20px;
+  }
+}
+
+/* For screens up to 425px */
+@media (max-width: 426px) {
+  .page-container {
+    margin: 2rem 1rem;
+  }
+
+  .tab-header {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .tab-button {
+    font-size: 16px;
+    padding: 0.4rem;
+  }
+
+  .content-card {
+    padding: 1.5rem;
+    margin-left: 0;
+  }
+
+  .benefits-list li {
+    font-size: 20px;
+    gap: 8px;
+  }
+
+  .dropdown-header h3 {
+    font-size: 20px;
+  }
+
+  .dropdown-content {
+    font-size: 20px;
+  }
+
+  .level-detail span {
+    font-size: 20px;
+  }
+}
+
+/* For screens up to 375px */
+@media (max-width: 376px) {
+  .page-container {
+    margin: 1.5rem 0.5rem;
+  }
+
+  .tab-header {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .tab-button {
+    font-size: 14px;
+    padding: 0.3rem;
+  }
+
+  .content-card {
+    padding: 1rem;
+  }
+
+  .benefits-list li {
+    font-size: 18px;
+    gap: 6px;
+  }
+
+  .dropdown-header h3 {
+    font-size: 18px;
+  }
+
+  .dropdown-content {
+    font-size: 18px;
+  }
+
+  .level-detail span {
+    font-size: 18px;
+  }
+}
+
+/* For screens up to 320px */
+@media (max-width: 321px) {
+  .page-container {
+    margin: 1rem 0.5rem;
+  }
+  .overview-description {
+    font-size: 14px;
+    width: 100%;
+}
+
+  .tab-header {
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .tab-button {
+    font-size: 12px;
+    padding: 0.2rem;
+  }
+
+  .content-card {
+    padding: 0.8rem;
+  }
+
+  .benefits-list li {
+    font-size: 16px;
+    gap: 5px;
+  }
+
+  .dropdown-header h3 {
+    font-size: 16px;
+  }
+
+  .dropdown-content {
+    font-size: 16px;
+  }
+
+  .level-detail span {
+    font-size: 16px;
+  }
+}

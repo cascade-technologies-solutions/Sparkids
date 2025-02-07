@@ -1,0 +1,207 @@
+.new-header {
+  display: flex;
+  justify-content: end;
+  background: var(--bg-gradient);
+  padding: 20px 0;
+  position: relative;
+}
+
+.new-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.new-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0px 20px;
+  display: flex;
+  gap: 27px;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-bottom: 3px solid var(--primary-orange);
+  box-shadow: 0 5px 6px rgba(255, 124, 46, 0.8);
+  border-radius: 0 0 30px 30px;
+}
+
+.new-nav-item {
+  text-align: center;
+}
+
+.new-nav-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 24.5px;
+  font-family: Leckerli One;
+  color: #455A64;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.new-nav-link img {
+  width: 80px;
+  height: 80px;
+  margin-top: 20px;
+  margin-right: -9px;
+  display: block;
+}
+
+.new-nav-link:hover {
+  color: #e67e22;
+  transform: translateY(-5px);
+}
+
+.new-nav-icon {
+  margin-top: 2px;
+  margin-right: 8px;
+  display: block;
+}
+
+.header1-contact-container {
+  margin-left: 626px;
+  border-bottom: 3px solid var(--primary-orange);
+  border-radius: 0 0 43px 43px;
+  padding: 5px;
+  margin-top: -23px;
+  width: 300px;
+  z-index: 2;
+  background: var(--bg-color);
+}
+
+.header1-contact-button {
+  text-decoration: none;
+  border-radius: 12px;
+  color: #455A64;
+  font-size: 24.5px;
+  font-family: Leckerli One;
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 222px;
+  height: 64px;
+  margin-left: 36px;
+  margin-top: 4px;
+  position: relative;
+  border: 5px solid transparent;
+  background: var(--bg-color);
+  background-clip: padding-box;
+}
+
+.header1-contact-button::after {
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  left: -4px;
+  right: -4px;
+  background: linear-gradient(to right, orange, black);
+  content: '';
+  z-index: -1;
+  border-radius: 12px;
+}
+
+.header1-contact-button img {
+  width: 80px;
+  height: 80px;
+  margin-top: 20px;
+  margin-right: -9px;
+  display: block;
+}
+
+.header1-contact-button:hover {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.hamburger1 {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+  z-index: 10; /* Ensures it stays above the navigation */
+}
+
+.hamburger1 span {
+  width: 25px;
+  height: 3px;
+  background: #4a4a4a;
+  transition: all 0.3s;
+}
+
+.hamburger1.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger1.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger1.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Updated for responsive design */
+@media (max-width: 768px) {
+  .new-nav-link {
+      font-size: 15px;
+  }
+  .new-nav-link img {
+      width: 60px;
+      height: 60px;
+  }
+  .new-nav-list {
+      gap: 0px;
+  }
+  .header1-contact-container {
+      width: 200px;
+  }
+  .header1-contact-button {
+      font-size: 15px;
+      width: 140px;
+      height: 45px;
+  }
+  .header1-contact-button img {
+      width: 60px;
+      height: 60px;
+  }
+}
+
+/* Added for hamburger visibility and nav behavior */
+/* Ensure the navigation aligns with the hamburger icon */
+@media (max-width: 450px) {
+  .hamburger1 {
+      display: flex;
+      position: absolute;
+      top: 20px; /* Adjust to match your hamburger's vertical position */
+      right: 20px;
+      z-index: 10; /* Ensure it stays above the nav */
+  }
+  
+  .new-nav {
+      position: fixed;
+      top: 20px; /* Matches the hamburger's vertical position */
+      right: -100%; /* Hidden by default */
+      flex-direction: column;
+      align-items: center;
+      height: calc(100% - 20px); /* Leaves space for the hamburger icon */
+      width: 250px;
+      background-color: #fff;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+      transition: right 0.3s ease;
+  }
+
+  .new-nav.open {
+      right: 0; /* Slide in when open */
+  }
+  .new-nav-item {
+    text-align: center;
+    height: 30px;
+}
+.new-nav-list{
+  gap: 20px;
+}
+}
+
