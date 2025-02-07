@@ -1,10 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import logo from "../Assets/home-img/logo.png";
 import "../styles/footer.css";
+import { API_BASE_URL } from "../api";
 
 const Footer = () => {
+  const [email, setemail] = useState("");
+  const [responseMessage, setResponseMessage] = useState("");
+
+  const handleEmailCLick = async () => {
+    try {
+        const formData = new FormData();
+        formData.append("Email", email);
+
+        const response = await fetch(`${API_BASE_URL}/email`, {
+            method: "POST",
+            body: formData,
+        });
+
+        if (response.ok) {
+            const data = await response.text();
+            setResponseMessage("We will get back to you!");
+            setTimeout(() => setResponseMessage(""), 3000);
+        } else {
+            const errorData = await response.text();
+            setResponseMessage(errorData || "Failed to submit. Please try again.");
+        }
+    } catch (error) {
+        console.error("Error contacting API:", error);
+        setResponseMessage("An error occurred. Please try again later.");
+    }
+};
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -84,12 +112,23 @@ const Footer = () => {
           <h3>Subscribe to News Letters</h3>
           <p>Stay in the loop with the latest news and <br /> updates from SparkKids.</p>
           <form>
-            <input type="email" placeholder="Email here" />
-            <div className="subscribe-btn" role="button" onClick={() => alert("Subscribed!")}>
+            <input
+              type="email"
+              placeholder="Email here"
+              value={email}
+              onChange={(e) => setemail(e.target.value)}
+            />
+            <button
+              type="submit"
+              onClick={(e) => {
+                e.preventDefault();
+                handleEmailCLick();
+              }}
+            >
               Subscribe Now
-            </div>
+            </button>
           </form>
-
+          {responseMessage && <p>{responseMessage}</p>}
         </div>
       </div>
 

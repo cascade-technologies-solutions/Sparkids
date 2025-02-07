@@ -1,20 +1,93 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/ContactForm.css";
+import { API_BASE_URL } from "../api";
 
 const ContactForm = () => {
+  
+  const [formData, setFormData] = useState({
+    fullName: "",
+    phone: "",
+    email: "",
+    reason: "",
+    message: "",
+  });
+
+  const [responseMessage, setResponseMessage] = useState("");
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const dataToSend = new FormData();
+      dataToSend.append("fullName", formData.fullName);
+      dataToSend.append("phone", formData.phone);
+      dataToSend.append("email", formData.email);
+      dataToSend.append("reason", formData.reason);
+      dataToSend.append("message", formData.message);
+
+      const response = await fetch(`${API_BASE_URL}/contact`, {
+        method: "POST",
+        body: dataToSend,
+      });
+
+      if (response.ok) {
+        setResponseMessage("We will get back to you!");
+        setTimeout(() => setResponseMessage(""), 3000);
+      } else {
+        const errorData = await response.text();
+        setResponseMessage(errorData || "Failed to submit. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error contacting API:", error);
+      setResponseMessage("An error occurred. Please try again later.");
+    }
+  };
+
   return (
     <div className="contact-container">
       <div className="contact-row">
         {/* Left side - Form */}
         <div className="contact-form-section">
           <h2 className="contact-heading">Drop us a message</h2>
-          <form>
-            <input type="text" placeholder="Full name" required />
-            <input type="tel" placeholder="Phone number" required />
-            <input type="email" placeholder="Email I’d" required />
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="fullName"
+              placeholder="Full name"
+              value={formData.fullName}
+              onChange={handleInputChange}
+              required
+            />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Phone number"
+              value={formData.phone}
+              onChange={handleInputChange}
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email I’d"
+              value={formData.email}
+              onChange={handleInputChange}
+              required
+            />
             <div className="dropdown-container">
-              <select className="styled-dropdown" required>
-                <option value="" disabled selected>
+              <select
+                className="styled-dropdown"
+                name="reason"
+                value={formData.reason}
+                onChange={handleInputChange}
+                required
+              >
+                <option value="" disabled>
                   I’m Reaching out about
                 </option>
                 <option value="enroll">Enrolling my child</option>
@@ -23,11 +96,18 @@ const ContactForm = () => {
                 <option value="general">General Inquiry</option>
               </select>
             </div>
-            <textarea placeholder="Your message. . ." required />
+            <textarea
+              name="message"
+              placeholder="Your message. . ."
+              value={formData.message}
+              onChange={handleInputChange}
+              required
+            />
             <button type="submit" className="submit-button">
               Submit your response
             </button>
           </form>
+          {responseMessage && <p className="response-message">{responseMessage}</p>}
         </div>
 
         {/* Right side - Contact Info */}
