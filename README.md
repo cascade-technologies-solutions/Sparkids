@@ -1,7 +1,9 @@
 # Sparkids 🌟
 
 ## versions
-
+- Normal light mode: v1.0.0
+- Splash cursor mode : v1.1.0
+- Dark mode: v1.2.0
 
 ## Run live 👇🏻
 [Sparkid](https://AmullyaPatil.github.io/Sparkids)
