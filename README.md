@@ -5,8 +5,8 @@
 - Splash cursor mode : v1.1.0
 - Dark mode: v1.2.0
 
-;; ## Run live 👇🏻
-;; [Sparkid](https://AmullyaPatil.github.io/Sparkids)
+## Run live 👇🏻
+[Sparkid](https://cascade-technologies-solutions.github.io/Sparkids/)
 
 - Sparkids is an educational platform designed to empower young learners with engaging and 
 interactive courses. Our mission is to inspire curiosity, creativity, 
